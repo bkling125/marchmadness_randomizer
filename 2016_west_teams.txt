@@ -1,0 +1,16 @@
+1	Oregon
+2	Oklahoma
+3	Texas A&M
+4	Duke
+5	Baylor
+6	Texas
+7	Oregon State
+8	Saint Joe's
+9	Cincinnati
+10	VCU
+11	Northern Iowa
+12	Yale
+13	UNC Wilmington
+14	Green Bay
+15	CSU Bakersfield
+16	Holy Cross

@@ -1,0 +1,16 @@
+1	Kansas
+2	Villanova
+3	Miami
+4	California
+5	Maryland
+6	Arizona
+7	Iowa
+8	Colorado
+9	Connecticut
+10	Temple
+11	Witchita St.
+12	S. Dakota St.
+13	Hawaii
+14	Buffalo
+15	UNC Asheville
+16	Austin Peay

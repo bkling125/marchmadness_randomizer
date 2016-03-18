@@ -1,0 +1,16 @@
+1	UVA
+2	Michigan
+3	Utah
+4	Iowa State
+5	Purdue
+6	Seton Hall
+7	Dayton
+8	Texas Tech
+9	Butler
+10	Syracuse
+11	Gonzaga
+12	AR-Little Rock
+13	Iona
+14	Fresno State
+15	Mid Tennessee
+16	Hampton

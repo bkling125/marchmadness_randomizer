@@ -1,0 +1,16 @@
+1	UNC
+2	Xavier
+3	West Virginia
+4	Kentucky
+5	Indiana
+6	Notre Dame
+7	Wisconsin
+8	USC
+9	Providence
+10	Pitt
+11	Michigan
+12	Chattanooga
+13	Stony Brook
+14	SF Austin
+15	Weber State
+16	FGCU
