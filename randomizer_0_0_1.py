@@ -1,11 +1,6 @@
-import random
-import io
-import csv
-
-
-# reads the file with the seed information (tab delimited as seed#    team_name)
-# and produces a dictionary with (k,v) pairs as (seed#, team_name)
 def read_seed_file(filename):
+    # reads the file with the seed information (tab delimited as seed#    team_name)
+    # and produces a dictionary with (k,v) pairs as (seed#, team_name)
     # open the file
     directory = "C:/Users/bkling/Documents/madness_randomizer/"
     file_path = directory + filename
