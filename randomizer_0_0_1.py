@@ -1,28 +1,32 @@
-def read_seed_file(filename):
+def read_seed_file(run_year, region):
     # reads the file with the seed information (tab delimited as seed#    team_name)
-    # and produces a dictionary with (k,v) pairs as (seed#, team_name)
+    # and produces a list of teams
     # open the file
-    directory = "C:/Users/bkling/Documents/madness_randomizer/"
-    file_path = directory + filename
+    directory = "F:/Github/marchmadness_randomizer/"
+    file_path = directory + runyear + '_' + region + '_' + 'teams.txt'
     f = open(file_path)
 
-    # create dictionary
-    teams = {}
+    # initialize the Region class
+    reg = Region(region)
+
+    # there are always 16 teams in a single region
     for i in range(16):
         line_output = f.readline()
         seed, team = line_output.strip().split("\t")
-        teams[int(seed)] = str(team)
+        reg.append_team(Team(team, seed, reg.name))
+
+    reg.print_teams()
 
     # create matchups...
-    matchup = {}
-    while teams:
-        print(str(teams[min(teams)]), "(" + str(min(teams)) + ")", 'Vs.', str(teams[max(teams)]),
-              "(" + str(max(teams)) + ")")
-        matchup[min(teams)] = max(teams)
-        del teams[min(teams)]
-        del teams[max(teams)]
-    print(matchup)
-    return teams
+    # matchup = {}
+    # while teams:
+    #     print(str(teams[min(teams)]), "(" + str(min(teams)) + ")", 'Vs.', str(teams[max(teams)]),
+    #           "(" + str(max(teams)) + ")")
+    #     matchup[min(teams)] = max(teams)
+    #     del teams[min(teams)]
+    #     del teams[max(teams)]
+    # print(matchup)
+    # return teams
 
 
 def get_win_odds(seed1, seed2, round_num):
@@ -32,14 +36,14 @@ def get_win_odds(seed1, seed2, round_num):
 
     # hardcoded odds for RO64#
     # matchup    seed    % chance win    seed    % chance win
-    # 1v16        1        99.50%            16        0.50%
-    # 2v15        2        98.00%            15        2.00%
-    # 3v14        3        93.00%            14        7.00%
-    # 4v13        4        85.00%            13        15.00%
-    # 5v12        5        70.59%            12        29.41%
-    # 6v11        6        64.71%            11        35.29%
-    # 7v10        7        58.82%            10        41.18%
-    # 8v9        8        53.00%            9        47.00%
+    # 1v16       1       99.50%          16      0.50%
+    # 2v15       2       98.00%          15      2.00%
+    # 3v14       3       93.00%          14      7.00%
+    # 4v13       4       85.00%          13      15.00%
+    # 5v12       5       70.59%          12      29.41%
+    # 6v11       6       64.71%          11      35.29%
+    # 7v10       7       58.82%          10      41.18%
+    # 8v9        8       53.00%          9       47.00%
 
     if round_num == 64:
         # use hardcoded odds
@@ -68,8 +72,29 @@ def get_win_odds(seed1, seed2, round_num):
 class Team:
     def __init__(self, name, seed, region):
         self.name = name
-        self.seed = seed
+        self.seed = int(seed)
         self.region = region
+
+
+class Region:
+    # this is the class that represents a region which contains the 16 teams that make up the region
+    def __init__(self, name):
+        self.teams = [] # array of teams
+        self.name = name # name of the region (eg. Midwest)
+
+    def append_team(self, team_cl):
+        self.teams.append(team_cl)
+
+    def print_teams(self):
+        print(self.name)
+        print("------------------------------------------------------------")
+        for team in self.teams:
+            if team.seed < 10: # prettier formatting
+                print("(" + str(team.seed) + ")  " + team.name)
+            else:
+                print("(" + str(team.seed) + ") " + team.name)
+        print("------------------------------------------------------------")
+        print("")
 
 
 def winner_print(rand_outcome, team_1, team_2, win_odds):
@@ -110,3 +135,16 @@ def winner_print(rand_outcome, team_1, team_2, win_odds):
 # calculate odds for matchup
 # calculate possible scores for matchup
 # generate random results for each matchup based on odds
+
+if __name__ == '__main__':
+    # initialization of process..
+    print('Beginning of the process...')
+    runyear = input("Enter year to run the program on: ")
+    print("")
+    print(str(runyear))
+
+    # read the seed files to build the teams
+    # assume that the format of the file name is like "YYYY_[region]_teams.txt"
+    region_list = ("east", "midwest", "south", "west")
+    for region_name in region_list:
+        read_seed_file(runyear, region_name)
