@@ -19,7 +19,7 @@ def read_seed_file(run_year, region):
         seed, team = line_output.strip().split("\t")
         return_region.append_team(Team(team, seed, return_region.name))
 
-    # reg.print_teams()
+    return_region.compute_region_results()
 
     return return_region
 
@@ -45,8 +45,20 @@ class Team:
 class Region:
     # this is the class that represents a region which contains the 16 teams that make up the region
     def __init__(self, name):
+        self.region_winner = None  # Team variable
         self.teams = []  # array of teams
         self.name = name  # name of the region (eg. Midwest)
+        self.ro64_matchups = []  # Array of Teams
+        self.ro32_matchups = []  # Array of Teams
+        self.ro16_matchups = []  # Array of Teams
+        self.ro8_matchups = []  # Array of Teams
+
+    def compute_region_results(self):
+        self.matchup_builder(64)
+        self.matchup_builder(32)
+        self.matchup_builder(16)
+        self.matchup_builder(8)
+        self.region_winner = self.ro8_matchups[0].winner  # Team variable
 
     def append_team(self, team_cl):
         self.teams.append(team_cl)
@@ -62,6 +74,75 @@ class Region:
         print("------------------------------------------------------------")
         print("")
 
+    def print_region_outcome(self, round_number):
+        print(self.name, "matchups: Round of", round_number)
+        print("-------------------------------- ")
+
+        if round_number == 64:
+            for matchup in self.ro64_matchups:
+                # "Outcome: 0.xxx: (1) Team1 advances to the Round of 32"
+                print("Outcome: " + str(round(matchup.rand_outcome, 3)) + ": (" + str(matchup.winner.seed) + ") " +
+                      matchup.winner.name + " advances to the Round of 32")
+
+    def matchup_builder(self, round_number):
+        # handling for Round of 64
+        if round_number == 64:
+            # here we have 8 total Matchups to create, with fixed seeds making up each Matchup
+            for i in range(8):
+                if i == 1:
+                    t1_seed = 1
+                    t2_seed = 16
+                elif i == 2:
+                    t1_seed = 8
+                    t2_seed = 9
+                elif i == 3:
+                    t1_seed = 5
+                    t2_seed = 12
+                elif i == 4:
+                    t1_seed = 4
+                    t2_seed = 13
+                elif i == 5:
+                    t1_seed = 6
+                    t2_seed = 11
+                elif i == 6:
+                    t1_seed = 3
+                    t2_seed = 14
+                elif i == 7:
+                    t1_seed = 7
+                    t2_seed = 10
+                else:
+                    t1_seed = 2
+                    t2_seed = 15
+                self.ro64_matchups.append(
+                    Matchup(self.teams[t1_seed - 1], self.teams[t2_seed - 1], round_number, i - 1))
+
+        # handling for Round of 32
+        elif round_number == 32:
+            # here we have 4 total Matchups to create, building off of the winners from the Round of 64
+            for i in range(4):
+                # i = 1 want 64[0] and 64[1]
+                # i = 2 want 64[2] and 64[3]
+                # i = 3 want 64[4] and 64[5]
+                # i = 4 want 64[6] and 64[7]
+                # GENERAL: Given i, want 64[i*2-2] and 64[i*2-1]
+                self.ro32_matchups.append(
+                    Matchup(self.ro64_matchups[i * 2 - 2].winner, self.ro64_matchups[i * 2 - 1].winner, round_number,
+                            i - 1))
+
+        # handling for Sweet 16
+        elif round_number == 16:
+            # here we have 2 total Matchups to create, building off of the winners from the Round of 32
+            for i in range(2):
+                self.ro16_matchups.append(
+                    Matchup(self.ro32_matchups[i * 2 - 2].winner, self.ro32_matchups[i * 2 - 1].winner, round_number,
+                            i - 1))
+
+        # handling for Elite 8
+        elif round_number == 8:
+            # here we have 1 total Matchup to create, building off of the winners from the Sweet 16
+            self.ro8_matchups.append(
+                Matchup(self.ro16_matchups[0].winner, self.ro16_matchups[1].winner, round_number, 0))
+
 
 class Matchup:
     # this is the class that represents a matchup, which gets placed into an array within the region class
@@ -71,6 +152,7 @@ class Matchup:
         self.winner = self.compute_winner()  # produce a winning Team
         self.round_num = reg_round  # the round the matchup is located at (64 = round of 64, .., 4 = Final Four, etc.)
         self.index = matchup_index
+        self.rand_outcome = random.random()  # random variable to produce the outcome
 
     def compute_winner(self):
         return self.top_team
@@ -116,10 +198,9 @@ class Matchup:
 
     def winner_print(self):
         # produce a winning team for the matchup and assign to winner Team object
-        rand_outcome = random.random()  # random variable to produce the outcome
         top_odds = self.get_odds_basic()  # retrieve odds from the get odds function
 
-        if rand_outcome <= top_odds:
+        if self.rand_outcome <= top_odds:
             winner = self.top_team
         else:
             winner = self.bottom_team
@@ -127,7 +208,7 @@ class Matchup:
         print("---------------------------------------------")
         print("Matchup is between", self.top_team.name, "and", self.bottom_team.name + ".")
         print(self.top_team.name, "has a", str(round(top_odds * 100, 2)) + "% chance of winning.")
-        print(winner.name, "advances. (", round(rand_outcome, 3), ")")
+        print(winner.name, "advances. (", round(self.rand_outcome, 3), ")")
         print("---------------------------------------------")
         print("")
 
@@ -177,4 +258,5 @@ if __name__ == '__main__':
         region_list.append(read_seed_file(runyear, region_name))
 
     for reg in region_list:
-        reg.print_teams()
+        # reg.print_teams()
+        reg.print_region_outcome(64)
