@@ -234,33 +234,9 @@ class Matchup:
 
         return winner
 
-
-# process
-# read team list
-# prepare matchups for round of 64
-# calculate odds for each matchup
-# generate random results for each matchup based on odds
-# prepare matchups for round of 32
-# calculate odds for each matchup
-# generate random results for each matchup based on odds
-
-# prepare matchups for sweet 16
-# calculate odds for each matchup
-# generate random results for each matchup based on odds
-
-# prepare matchups for elite 8
-# calculate odds for each matchup
-# generate random results for each matchup based on odds
-
-# first time teams are crossing regions
-# prepare matchups for final 4
-# calculate odds for each matchup
-# generate random results for each matchup based on odds
-
-# prepare matchups for championship
-# calculate odds for matchup
-# calculate possible scores for matchup
-# generate random results for each matchup based on odds
+class FinalFour:
+    def __init__(self, south_winner, west_winner, east_winner, midwest_winner):
+        # TODO generate the final four class and produce champion from it
 
 if __name__ == '__main__':
     # initialization of process..
@@ -283,3 +259,8 @@ if __name__ == '__main__':
         reg.print_region_outcome(32)
         reg.print_region_outcome(16)
         reg.print_region_outcome(8)
+
+    # pull in regional winners and prepare the final four
+    # South vs. West
+    # East vs. Midwest
+    # (Winner of South vs. West) vs. (Winner of East vs. Midwest)
