@@ -1,0 +1,753 @@
+Beginning of the process...
+Enter year to run the program on: 2016
+
+2016
+---------------------------------------------
+Matchup is between Kansas and Austin Peay.
+Kansas has a 99.5% chance of winning.
+FINAL SCORE: 
+(1) Kansas: 64
+(16) Austin Peay: 48
+
+Kansas advances. ( 0.269 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Colorado and Connecticut.
+Colorado has a 52.94% chance of winning.
+FINAL SCORE: 
+(8) Colorado: 46
+(9) Connecticut: 53
+
+Connecticut advances. ( 0.758 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Maryland and S. Dakota St..
+Maryland has a 70.59% chance of winning.
+FINAL SCORE: 
+(5) Maryland: 75
+(12) S. Dakota St.: 71
+
+Maryland advances. ( 0.093 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between California and Hawaii.
+California has a 85.0% chance of winning.
+FINAL SCORE: 
+(4) California: 52
+(13) Hawaii: 51
+
+California advances. ( 0.004 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Arizona and Witchita St..
+Arizona has a 64.71% chance of winning.
+FINAL SCORE: 
+(6) Arizona: 71
+(11) Witchita St.: 67
+
+Arizona advances. ( 0.589 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Miami and Buffalo.
+Miami has a 93.0% chance of winning.
+FINAL SCORE: 
+(3) Miami: 59
+(14) Buffalo: 57
+
+Miami advances. ( 0.202 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Iowa and Temple.
+Iowa has a 58.82% chance of winning.
+FINAL SCORE: 
+(7) Iowa: 56
+(10) Temple: 54
+
+Iowa advances. ( 0.043 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Villanova and UNC Asheville.
+Villanova has a 98.0% chance of winning.
+FINAL SCORE: 
+(2) Villanova: 65
+(15) UNC Asheville: 54
+
+Villanova advances. ( 0.086 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Kansas and Connecticut.
+Kansas has a 90.0% chance of winning.
+FINAL SCORE: 
+(1) Kansas: 74
+(9) Connecticut: 59
+
+Kansas advances. ( 0.173 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Maryland and California.
+Maryland has a 44.44% chance of winning.
+FINAL SCORE: 
+(5) Maryland: 63
+(4) California: 60
+
+Maryland advances. ( 0.092 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Arizona and Miami.
+Arizona has a 33.33% chance of winning.
+FINAL SCORE: 
+(6) Arizona: 69
+(3) Miami: 67
+
+Arizona advances. ( 0.236 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Iowa and Villanova.
+Iowa has a 22.22% chance of winning.
+FINAL SCORE: 
+(7) Iowa: 66
+(2) Villanova: 76
+
+Villanova advances. ( 0.885 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Kansas and Maryland.
+Kansas has a 83.33% chance of winning.
+FINAL SCORE: 
+(1) Kansas: 68
+(5) Maryland: 65
+
+Kansas advances. ( 0.659 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Arizona and Villanova.
+Arizona has a 25.0% chance of winning.
+FINAL SCORE: 
+(6) Arizona: 70
+(2) Villanova: 75
+
+Villanova advances. ( 0.54 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Kansas and Villanova.
+Kansas has a 66.67% chance of winning.
+FINAL SCORE: 
+(1) Kansas: 58
+(2) Villanova: 61
+
+Villanova advances. ( 0.936 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Oregon and Holy Cross.
+Oregon has a 99.5% chance of winning.
+FINAL SCORE: 
+(1) Oregon: 65
+(16) Holy Cross: 55
+
+Oregon advances. ( 0.145 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Saint Joe's and Cincinnati.
+Saint Joe's has a 52.94% chance of winning.
+FINAL SCORE: 
+(8) Saint Joe's: 51
+(9) Cincinnati: 47
+
+Saint Joe's advances. ( 0.518 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Baylor and Yale.
+Baylor has a 70.59% chance of winning.
+FINAL SCORE: 
+(5) Baylor: 63
+(12) Yale: 70
+
+Yale advances. ( 0.734 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Duke and UNC Wilmington.
+Duke has a 85.0% chance of winning.
+FINAL SCORE: 
+(4) Duke: 63
+(13) UNC Wilmington: 62
+
+Duke advances. ( 0.074 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Texas and Northern Iowa.
+Texas has a 64.71% chance of winning.
+FINAL SCORE: 
+(6) Texas: 67
+(11) Northern Iowa: 62
+
+Texas advances. ( 0.626 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Texas A&M and Green Bay.
+Texas A&M has a 93.0% chance of winning.
+FINAL SCORE: 
+(3) Texas A&M: 74
+(14) Green Bay: 70
+
+Texas A&M advances. ( 0.819 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Oregon State and VCU.
+Oregon State has a 58.82% chance of winning.
+FINAL SCORE: 
+(7) Oregon State: 66
+(10) VCU: 67
+
+VCU advances. ( 0.657 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Oklahoma and CSU Bakersfield.
+Oklahoma has a 98.0% chance of winning.
+FINAL SCORE: 
+(2) Oklahoma: 75
+(15) CSU Bakersfield: 70
+
+Oklahoma advances. ( 0.442 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Oregon and Saint Joe's.
+Oregon has a 88.89% chance of winning.
+FINAL SCORE: 
+(1) Oregon: 50
+(8) Saint Joe's: 55
+
+Saint Joe's advances. ( 0.909 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Yale and Duke.
+Yale has a 25.0% chance of winning.
+FINAL SCORE: 
+(12) Yale: 46
+(4) Duke: 64
+
+Duke advances. ( 0.287 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Texas and Texas A&M.
+Texas has a 33.33% chance of winning.
+FINAL SCORE: 
+(6) Texas: 58
+(3) Texas A&M: 69
+
+Texas A&M advances. ( 0.886 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between VCU and Oklahoma.
+VCU has a 16.67% chance of winning.
+FINAL SCORE: 
+(10) VCU: 73
+(2) Oklahoma: 79
+
+Oklahoma advances. ( 0.754 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Saint Joe's and Duke.
+Saint Joe's has a 33.33% chance of winning.
+FINAL SCORE: 
+(8) Saint Joe's: 70
+(4) Duke: 57
+
+Saint Joe's advances. ( 0.264 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Texas A&M and Oklahoma.
+Texas A&M has a 40.0% chance of winning.
+FINAL SCORE: 
+(3) Texas A&M: 54
+(2) Oklahoma: 52
+
+Texas A&M advances. ( 0.372 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Saint Joe's and Texas A&M.
+Saint Joe's has a 27.27% chance of winning.
+FINAL SCORE: 
+(8) Saint Joe's: 63
+(3) Texas A&M: 67
+
+Texas A&M advances. ( 0.368 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between UNC and FGCU.
+UNC has a 99.5% chance of winning.
+FINAL SCORE: 
+(1) UNC: 70
+(16) FGCU: 50
+
+UNC advances. ( 0.155 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between USC and Providence.
+USC has a 52.94% chance of winning.
+FINAL SCORE: 
+(8) USC: 66
+(9) Providence: 62
+
+USC advances. ( 0.105 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Indiana and Chattanooga.
+Indiana has a 70.59% chance of winning.
+FINAL SCORE: 
+(5) Indiana: 92
+(12) Chattanooga: 70
+
+Indiana advances. ( 0.114 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Kentucky and Stony Brook.
+Kentucky has a 85.0% chance of winning.
+FINAL SCORE: 
+(4) Kentucky: 60
+(13) Stony Brook: 45
+
+Kentucky advances. ( 0.162 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Notre Dame and Michigan.
+Notre Dame has a 64.71% chance of winning.
+FINAL SCORE: 
+(6) Notre Dame: 53
+(11) Michigan: 51
+
+Notre Dame advances. ( 0.104 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between West Virginia and SF Austin.
+West Virginia has a 93.0% chance of winning.
+FINAL SCORE: 
+(3) West Virginia: 80
+(14) SF Austin: 61
+
+West Virginia advances. ( 0.855 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Wisconsin and Pitt.
+Wisconsin has a 58.82% chance of winning.
+FINAL SCORE: 
+(7) Wisconsin: 77
+(10) Pitt: 88
+
+Pitt advances. ( 0.921 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Xavier and Weber State.
+Xavier has a 98.0% chance of winning.
+FINAL SCORE: 
+(2) Xavier: 63
+(15) Weber State: 57
+
+Xavier advances. ( 0.078 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between UNC and USC.
+UNC has a 88.89% chance of winning.
+FINAL SCORE: 
+(1) UNC: 70
+(8) USC: 62
+
+UNC advances. ( 0.347 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Indiana and Kentucky.
+Indiana has a 44.44% chance of winning.
+FINAL SCORE: 
+(5) Indiana: 50
+(4) Kentucky: 52
+
+Kentucky advances. ( 0.616 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Notre Dame and West Virginia.
+Notre Dame has a 33.33% chance of winning.
+FINAL SCORE: 
+(6) Notre Dame: 57
+(3) West Virginia: 62
+
+West Virginia advances. ( 0.961 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Pitt and Xavier.
+Pitt has a 16.67% chance of winning.
+FINAL SCORE: 
+(10) Pitt: 60
+(2) Xavier: 73
+
+Xavier advances. ( 0.528 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between UNC and Kentucky.
+UNC has a 80.0% chance of winning.
+FINAL SCORE: 
+(1) UNC: 67
+(4) Kentucky: 73
+
+Kentucky advances. ( 0.986 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between West Virginia and Xavier.
+West Virginia has a 40.0% chance of winning.
+FINAL SCORE: 
+(3) West Virginia: 67
+(2) Xavier: 52
+
+West Virginia advances. ( 0.045 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Kentucky and West Virginia.
+Kentucky has a 42.86% chance of winning.
+FINAL SCORE: 
+(4) Kentucky: 46
+(3) West Virginia: 51
+
+West Virginia advances. ( 0.624 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between UVA and Hampton.
+UVA has a 99.5% chance of winning.
+FINAL SCORE: 
+(1) UVA: 62
+(16) Hampton: 57
+
+UVA advances. ( 0.306 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Texas Tech and Butler.
+Texas Tech has a 52.94% chance of winning.
+FINAL SCORE: 
+(8) Texas Tech: 55
+(9) Butler: 56
+
+Butler advances. ( 0.912 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Purdue and AR-Little Rock.
+Purdue has a 70.59% chance of winning.
+FINAL SCORE: 
+(5) Purdue: 82
+(12) AR-Little Rock: 59
+
+Purdue advances. ( 0.003 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Iowa State and Iona.
+Iowa State has a 85.0% chance of winning.
+FINAL SCORE: 
+(4) Iowa State: 62
+(13) Iona: 77
+
+Iona advances. ( 0.914 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Seton Hall and Gonzaga.
+Seton Hall has a 64.71% chance of winning.
+FINAL SCORE: 
+(6) Seton Hall: 77
+(11) Gonzaga: 70
+
+Seton Hall advances. ( 0.383 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Utah and Fresno State.
+Utah has a 93.0% chance of winning.
+FINAL SCORE: 
+(3) Utah: 76
+(14) Fresno State: 62
+
+Utah advances. ( 0.573 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Dayton and Syracuse.
+Dayton has a 58.82% chance of winning.
+FINAL SCORE: 
+(7) Dayton: 63
+(10) Syracuse: 53
+
+Dayton advances. ( 0.074 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Michigan and Mid Tennessee.
+Michigan has a 98.0% chance of winning.
+FINAL SCORE: 
+(2) Michigan: 69
+(15) Mid Tennessee: 63
+
+Michigan advances. ( 0.523 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between UVA and Butler.
+UVA has a 90.0% chance of winning.
+FINAL SCORE: 
+(1) UVA: 71
+(9) Butler: 67
+
+UVA advances. ( 0.8 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Purdue and Iona.
+Purdue has a 72.22% chance of winning.
+FINAL SCORE: 
+(5) Purdue: 66
+(13) Iona: 64
+
+Purdue advances. ( 0.394 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Seton Hall and Utah.
+Seton Hall has a 33.33% chance of winning.
+FINAL SCORE: 
+(6) Seton Hall: 56
+(3) Utah: 73
+
+Utah advances. ( 0.741 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Dayton and Michigan.
+Dayton has a 22.22% chance of winning.
+FINAL SCORE: 
+(7) Dayton: 67
+(2) Michigan: 77
+
+Michigan advances. ( 0.366 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between UVA and Purdue.
+UVA has a 83.33% chance of winning.
+FINAL SCORE: 
+(1) UVA: 68
+(5) Purdue: 67
+
+UVA advances. ( 0.497 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Utah and Michigan.
+Utah has a 40.0% chance of winning.
+FINAL SCORE: 
+(3) Utah: 77
+(2) Michigan: 63
+
+Utah advances. ( 0.1 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between UVA and Utah.
+UVA has a 75.0% chance of winning.
+FINAL SCORE: 
+(1) UVA: 63
+(3) Utah: 62
+
+UVA advances. ( 0.396 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Villanova and Texas A&M.
+Villanova has a 60.0% chance of winning.
+FINAL SCORE: 
+(2) Villanova: 62
+(3) Texas A&M: 60
+
+Villanova advances. ( 0.576 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between West Virginia and UVA.
+West Virginia has a 25.0% chance of winning.
+FINAL SCORE: 
+(3) West Virginia: 71
+(1) UVA: 82
+
+UVA advances. ( 0.755 )
+---------------------------------------------
+
+---------------------------------------------
+Matchup is between Villanova and UVA.
+Villanova has a 33.33% chance of winning.
+FINAL SCORE: 
+(2) Villanova: 64
+(1) UVA: 56
+
+Villanova advances. ( 0.248 )
+---------------------------------------------
+
+south matchups: Round of 64
+-------------------------------- 
+Outcome: 0.269: (1) Kansas advances to the Round of 32
+Outcome: 0.758: (9) Connecticut advances to the Round of 32
+Outcome: 0.093: (5) Maryland advances to the Round of 32
+Outcome: 0.004: (4) California advances to the Round of 32
+Outcome: 0.589: (6) Arizona advances to the Round of 32
+Outcome: 0.202: (3) Miami advances to the Round of 32
+Outcome: 0.043: (7) Iowa advances to the Round of 32
+Outcome: 0.086: (2) Villanova advances to the Round of 32
+
+west matchups: Round of 64
+-------------------------------- 
+Outcome: 0.145: (1) Oregon advances to the Round of 32
+Outcome: 0.518: (8) Saint Joe's advances to the Round of 32
+Outcome: 0.734: (12) Yale advances to the Round of 32
+Outcome: 0.074: (4) Duke advances to the Round of 32
+Outcome: 0.626: (6) Texas advances to the Round of 32
+Outcome: 0.819: (3) Texas A&M advances to the Round of 32
+Outcome: 0.657: (10) VCU advances to the Round of 32
+Outcome: 0.442: (2) Oklahoma advances to the Round of 32
+
+east matchups: Round of 64
+-------------------------------- 
+Outcome: 0.155: (1) UNC advances to the Round of 32
+Outcome: 0.105: (8) USC advances to the Round of 32
+Outcome: 0.114: (5) Indiana advances to the Round of 32
+Outcome: 0.162: (4) Kentucky advances to the Round of 32
+Outcome: 0.104: (6) Notre Dame advances to the Round of 32
+Outcome: 0.855: (3) West Virginia advances to the Round of 32
+Outcome: 0.921: (10) Pitt advances to the Round of 32
+Outcome: 0.078: (2) Xavier advances to the Round of 32
+
+midwest matchups: Round of 64
+-------------------------------- 
+Outcome: 0.306: (1) UVA advances to the Round of 32
+Outcome: 0.912: (9) Butler advances to the Round of 32
+Outcome: 0.003: (5) Purdue advances to the Round of 32
+Outcome: 0.914: (13) Iona advances to the Round of 32
+Outcome: 0.383: (6) Seton Hall advances to the Round of 32
+Outcome: 0.573: (3) Utah advances to the Round of 32
+Outcome: 0.074: (7) Dayton advances to the Round of 32
+Outcome: 0.523: (2) Michigan advances to the Round of 32
+
+south matchups: Round of 32
+-------------------------------- 
+Outcome: 0.173: (1) Kansas advances to the Sweet Sixteen
+Outcome: 0.092: (5) Maryland advances to the Sweet Sixteen
+Outcome: 0.236: (6) Arizona advances to the Sweet Sixteen
+Outcome: 0.885: (2) Villanova advances to the Sweet Sixteen
+
+west matchups: Round of 32
+-------------------------------- 
+Outcome: 0.909: (8) Saint Joe's advances to the Sweet Sixteen
+Outcome: 0.287: (4) Duke advances to the Sweet Sixteen
+Outcome: 0.886: (3) Texas A&M advances to the Sweet Sixteen
+Outcome: 0.754: (2) Oklahoma advances to the Sweet Sixteen
+
+east matchups: Round of 32
+-------------------------------- 
+Outcome: 0.347: (1) UNC advances to the Sweet Sixteen
+Outcome: 0.616: (4) Kentucky advances to the Sweet Sixteen
+Outcome: 0.961: (3) West Virginia advances to the Sweet Sixteen
+Outcome: 0.528: (2) Xavier advances to the Sweet Sixteen
+
+midwest matchups: Round of 32
+-------------------------------- 
+Outcome: 0.8: (1) UVA advances to the Sweet Sixteen
+Outcome: 0.394: (5) Purdue advances to the Sweet Sixteen
+Outcome: 0.741: (3) Utah advances to the Sweet Sixteen
+Outcome: 0.366: (2) Michigan advances to the Sweet Sixteen
+
+south matchups: Round of 16
+-------------------------------- 
+Outcome: 0.659: (1) Kansas advances to the Elite Eight
+Outcome: 0.54: (2) Villanova advances to the Elite Eight
+
+west matchups: Round of 16
+-------------------------------- 
+Outcome: 0.264: (8) Saint Joe's advances to the Elite Eight
+Outcome: 0.372: (3) Texas A&M advances to the Elite Eight
+
+east matchups: Round of 16
+-------------------------------- 
+Outcome: 0.986: (4) Kentucky advances to the Elite Eight
+Outcome: 0.045: (3) West Virginia advances to the Elite Eight
+
+midwest matchups: Round of 16
+-------------------------------- 
+Outcome: 0.497: (1) UVA advances to the Elite Eight
+Outcome: 0.1: (3) Utah advances to the Elite Eight
+
+south matchups: Round of 8
+-------------------------------- 
+Outcome: 0.936: (2) Villanova advances to the Final Four
+
+west matchups: Round of 8
+-------------------------------- 
+Outcome: 0.368: (3) Texas A&M advances to the Final Four
+
+east matchups: Round of 8
+-------------------------------- 
+Outcome: 0.624: (3) West Virginia advances to the Final Four
+
+midwest matchups: Round of 8
+-------------------------------- 
+Outcome: 0.396: (1) UVA advances to the Final Four
+
+Final Four Matchups!
+---------------------------------------------
+Outcome: 0.576: (2) Villanova advances to the Championship!
+Outcome: 0.755: (1) UVA advances to the Championship!
+---------------------------------------------
+
+CHAMPIONSHIP MATCH!
+---------------------------------------------
+Outcome: 0.248: (2) Villanova has won the NCAA Tournament!!
+
+Process finished with exit code 0

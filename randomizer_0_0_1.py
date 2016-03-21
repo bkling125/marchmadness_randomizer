@@ -47,6 +47,7 @@ class Team:
 
     # TODO add method to build matchup history
 
+
 class Region:
     # this is the class that represents a region which contains the 16 teams that make up the region
     def __init__(self, name):
@@ -181,7 +182,6 @@ class Matchup:
         self.losescore = 0  # variable to contain the score for the losing Team
         self.winner = self.winner_print()  # produce a winning Team
 
-
     def get_odds_basic(self):
         # return odds of winning for seed 1, given seed 1 and 2
 
@@ -230,12 +230,12 @@ class Matchup:
         else:
             winner = self.bottom_team
 
-        #  int(round(numpy.random.normal(68,10),0))
-        winscore = int(round(numpy.random.normal(68,10),0))  # generate a Normal RV with mean = 68 and st. dev = 10
+        winscore = int(round(numpy.random.normal(68, 10), 0))  # generate a Normal RV with mean = 68 and st. dev = 10
         losescore = winscore + 1  # initialize the losing score
+
         #  continue creating Normal RV until generated a valid lose score
         while losescore >= winscore:
-            losescore = int(round(numpy.random.normal(68,10),0))
+            losescore = int(round(numpy.random.normal(68, 10), 0))
 
         print("---------------------------------------------")
         print("Matchup is between", self.top_team.name, "and", self.bottom_team.name + ".")
@@ -264,16 +264,15 @@ class Matchup:
 
 class FinalFour:
     def __init__(self, south_winner, west_winner, east_winner, midwest_winner):
-        # TODO generate the final four class and produce champion from it
         self.south_team = south_winner  # winner of South region - faces West winner
         self.west_team = west_winner  # winner of West region - faces South winner
         self.east_team = east_winner  # winner of East region - faces Midwest winner
         self.midwest_team = midwest_winner  # winner of Midwest region - faces East winner
 
         self.s_v_w_matchup = Matchup(self.south_team, self.west_team, 4, 0)  # Matchup between South and West
-        self.e_v_mw_matchup = Matchup(self.east_team, self.midwest_team, 4, 1) # Matchup between East and Midwest
+        self.e_v_mw_matchup = Matchup(self.east_team, self.midwest_team, 4, 1)  # Matchup between East and Midwest
 
-        self.champ_matchup = None # Championship Matchup - Determined in FinalFour.play_championship
+        self.champ_matchup = None  # Championship Matchup - Determined in FinalFour.play_championship
 
     def play_championship(self):
         self.champ_matchup = Matchup(self.s_v_w_matchup.winner, self.e_v_mw_matchup.winner, 2, 0)
@@ -316,13 +315,6 @@ if __name__ == '__main__':
     for region_name in region_name_list:
         region_list.append(read_seed_file(runyear, region_name))
 
-    for reg in region_list:
-        # reg.print_teams()
-        reg.print_region_outcome(64)
-        reg.print_region_outcome(32)
-        reg.print_region_outcome(16)
-        reg.print_region_outcome(8)
-
     # pull in regional winners and prepare the final four
     # South vs. West
     # East vs. Midwest
@@ -331,5 +323,14 @@ if __name__ == '__main__':
                          region_list[3].region_winner)
 
     fin_four.play_championship()
+
+    for reg in region_list:
+        reg.print_region_outcome(64)
+    for reg in region_list:
+        reg.print_region_outcome(32)
+    for reg in region_list:
+        reg.print_region_outcome(16)
+    for reg in region_list:
+        reg.print_region_outcome(8)
 
     fin_four.print_f4_outcome()
