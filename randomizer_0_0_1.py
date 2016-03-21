@@ -45,7 +45,7 @@ class Team:
         self.seed = int(seed)
         self.region = region
 
-    # TODO add method to build matchup history
+        # TODO add method to build matchup history
 
 
 class Region:
@@ -87,26 +87,26 @@ class Region:
         if round_number == 64:
             for matchup in self.ro64_matchups:
                 # "Outcome: 0.xxx: (1) Team1 advances to the Round of 32"
-                print("Outcome: " + str(round(matchup.rand_outcome, 3)) + ": (" + str(matchup.winner.seed) + ") " +
-                      matchup.winner.name + " advances to the Round of 32")
+                print("Outcome: " + str(matchup.winscore) + " - " + str(matchup.losescore) + ": ("
+                      + str(matchup.winner.seed) + ") " + matchup.winner.name + " advances to the Round of 32")
 
         if round_number == 32:
             for matchup in self.ro32_matchups:
                 # "Outcome: 0.xxx: (1) Team1 advances to the Sweet Sixteen"
-                print("Outcome: " + str(round(matchup.rand_outcome, 3)) + ": (" + str(matchup.winner.seed) + ") " +
-                      matchup.winner.name + " advances to the Sweet Sixteen")
+                print("Outcome: " + str(matchup.winscore) + " - " + str(matchup.losescore) + ": ("
+                      + str(matchup.winner.seed) + ") " + matchup.winner.name + " advances to the Sweet Sixteen")
 
         if round_number == 16:
             for matchup in self.ro16_matchups:
                 # "Outcome: 0.xxx: (1) Team1 advances to the Elite Eight"
-                print("Outcome: " + str(round(matchup.rand_outcome, 3)) + ": (" + str(matchup.winner.seed) + ") " +
-                      matchup.winner.name + " advances to the Elite Eight")
+                print("Outcome: " + str(matchup.winscore) + " - " + str(matchup.losescore) + ": ("
+                      + str(matchup.winner.seed) + ") " + matchup.winner.name + " advances to the Elite Eight")
 
         if round_number == 8:
             for matchup in self.ro8_matchups:
                 # "Outcome: 0.xxx: (1) Team1 advances to the Final Four"
-                print("Outcome: " + str(round(matchup.rand_outcome, 3)) + ": (" + str(matchup.winner.seed) + ") " +
-                      matchup.winner.name + " advances to the Final Four")
+                print("Outcome: " + str(matchup.winscore) + " - " + str(matchup.losescore) + ": ("
+                      + str(matchup.winner.seed) + ") " + matchup.winner.name + " advances to the Final Four")
 
         print("")
 
@@ -230,55 +230,56 @@ class Matchup:
         else:
             winner = self.bottom_team
 
-        winscore = int(round(numpy.random.normal(68, 10), 0))  # generate a Normal RV with mean = 68 and st. dev = 10
-        losescore = winscore + 1  # initialize the losing score
+        self.winscore = int(
+            round(numpy.random.normal(68, 10), 0))  # generate a Normal RV with mean = 68 and st. dev = 10
+        self.losescore = self.winscore + 1  # initialize the losing score
 
         #  continue creating Normal RV until generated a valid lose score
-        while losescore >= winscore:
-            losescore = int(round(numpy.random.normal(68, 10), 0))
+        while self.losescore >= self.winscore:
+            self.losescore = int(round(numpy.random.normal(68, 10), 0))
 
         print("---------------------------------------------")
 
         if self.round_num == 64:
             printstr = "--------- ROUND OF 64: "
             if self.top_team.region == "west":
-                printstr = printstr + "WEST REGION ----------"
+                printstr += "WEST REGION ----------"
             elif self.top_team.region == "midwest":
-                printstr = printstr + "MIDWEST REGION -------"
+                printstr += "MIDWEST REGION -------"
             elif self.top_team.region == "south":
-                printstr = printstr + "SOUTH REGION ---------"
+                printstr += "SOUTH REGION ---------"
             elif self.top_team.region == "east":
-                printstr = printstr + "EAST REGION ----------"
+                printstr += "EAST REGION ----------"
         elif self.round_num == 32:
             printstr = "--------- ROUND OF 32: "
             if self.top_team.region == "west":
-                printstr = printstr + "WEST REGION ----------"
+                printstr += "WEST REGION ----------"
             elif self.top_team.region == "midwest":
-                printstr = printstr + "MIDWEST REGION -------"
+                printstr += "MIDWEST REGION -------"
             elif self.top_team.region == "south":
-                printstr = printstr + "SOUTH REGION ---------"
+                printstr += "SOUTH REGION ---------"
             elif self.top_team.region == "east":
-                printstr = printstr + "EAST REGION ----------"
+                printstr += "EAST REGION ----------"
         elif self.round_num == 16:
             printstr = "-------- SWEET SIXTEEN: "
             if self.top_team.region == "west":
-                printstr = printstr + "WEST REGION ---------"
+                printstr += "WEST REGION ---------"
             elif self.top_team.region == "midwest":
-                printstr = printstr + "MIDWEST REGION ------"
+                printstr += "MIDWEST REGION ------"
             elif self.top_team.region == "south":
-                printstr = printstr + "SOUTH REGION --------"
+                printstr += "SOUTH REGION --------"
             elif self.top_team.region == "east":
-                printstr = printstr + "EAST REGION ---------"
+                printstr += "EAST REGION ---------"
         elif self.round_num == 8:
             printstr = "--------- ELITE EIGHT: "
             if self.top_team.region == "west":
-                printstr = printstr + "WEST REGION ----------"
+                printstr += "WEST REGION ----------"
             elif self.top_team.region == "midwest":
-                printstr = printstr + "MIDWEST REGION -------"
+                printstr += "MIDWEST REGION -------"
             elif self.top_team.region == "south":
-                printstr = printstr + "SOUTH REGION ---------"
+                printstr += "SOUTH REGION ---------"
             elif self.top_team.region == "east":
-                printstr = printstr + "EAST REGION ----------"
+                printstr += "EAST REGION ----------"
         elif self.round_num == 4:
             printstr = "---------------- FINAL FOUR -----------------"
         elif self.round_num == 2:
@@ -293,13 +294,13 @@ class Matchup:
 
         # if the winner is the Team on top, assign the winning score to the top Team
         if winner.name == self.top_team.name:
-            print("(" + str(self.top_team.seed) + ") " + self.top_team.name + ": " + str(winscore))
-            print("(" + str(self.bottom_team.seed) + ") " + self.bottom_team.name + ": " + str(losescore))
+            print("(" + str(self.top_team.seed) + ") " + self.top_team.name + ": " + str(self.winscore))
+            print("(" + str(self.bottom_team.seed) + ") " + self.bottom_team.name + ": " + str(self.losescore))
 
         # if the winner is the Team on bottom, assign the winning score to the bottom Team
         else:
-            print("(" + str(self.top_team.seed) + ") " + self.top_team.name + ": " + str(losescore))
-            print("(" + str(self.bottom_team.seed) + ") " + self.bottom_team.name + ": " + str(winscore))
+            print("(" + str(self.top_team.seed) + ") " + self.top_team.name + ": " + str(self.losescore))
+            print("(" + str(self.bottom_team.seed) + ") " + self.bottom_team.name + ": " + str(self.winscore))
 
         print("")
         print(winner.name, "advances. (", round(self.rand_outcome, 3), ")")
@@ -331,13 +332,17 @@ class FinalFour:
         print('Final Four Matchups!')
         print('---------------------------------------------')
         # "Outcome: 0.xxx: (1) Team1 advances to the Championship"
-        print("Outcome: " + str(round(self.s_v_w_matchup.rand_outcome, 3)) + ": (" +
-              str(self.s_v_w_matchup.winner.seed) + ") " +
-              self.s_v_w_matchup.winner.name + " advances to the Championship!")
 
-        print("Outcome: " + str(round(self.e_v_mw_matchup.rand_outcome, 3)) + ": (" +
-              str(self.e_v_mw_matchup.winner.seed) + ") " +
-              self.e_v_mw_matchup.winner.name + " advances to the Championship!")
+        # print("Outcome: " + str(matchup.winscore) + " - " + str(matchup.losescore) + ": ("
+        #               + str(matchup.winner.seed) + ") " + matchup.winner.name + 
+
+        print("Outcome: " + str(self.s_v_w_matchup.winscore) + " - " + str(self.s_v_w_matchup.losescore) + ": (" +
+              str(self.s_v_w_matchup.winner.seed) + ") " + self.s_v_w_matchup.winner.name +
+              " advances to the Championship!")
+
+        print("Outcome: " + str(self.e_v_mw_matchup.winscore) + " - " + str(self.e_v_mw_matchup.losescore) + ": (" +
+              str(self.e_v_mw_matchup.winner.seed) + ") " + self.e_v_mw_matchup.winner.name +
+              " advances to the Championship!")
 
         print('---------------------------------------------')
         print('')
@@ -345,9 +350,10 @@ class FinalFour:
         print('---------------------------------------------')
 
         # "Outcome: 0.xxx: (1) has won the NCAA Tournament!!"
-        print("Outcome: " + str(round(self.champ_matchup.rand_outcome, 3)) + ": (" +
-              str(self.champ_matchup.winner.seed) + ") " +
-              self.champ_matchup.winner.name + " has won the NCAA Tournament!!")
+        print("Outcome: " + str(self.champ_matchup.winscore) + " - " + str(self.champ_matchup.losescore) + ": (" +
+              str(self.champ_matchup.winner.seed) + ") " + self.champ_matchup.winner.name +
+              " has won the NCAA Tournament!!")
+
 
 if __name__ == '__main__':
     # initialization of process..
