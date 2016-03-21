@@ -1,4 +1,5 @@
 import random
+import numpy
 
 
 def read_seed_file(run_year, region):
@@ -176,7 +177,10 @@ class Matchup:
         self.round_num = reg_round  # the round the matchup is located at (64 = round of 64, .., 4 = Final Four, etc.)
         self.index = matchup_index
         self.rand_outcome = random.random()  # random variable to produce the outcome
+        self.winscore = 0  # variable to contain the score for the winning Team
+        self.losescore = 0  # variable to contain the score for the losing Team
         self.winner = self.winner_print()  # produce a winning Team
+
 
     def get_odds_basic(self):
         # return odds of winning for seed 1, given seed 1 and 2
@@ -226,9 +230,29 @@ class Matchup:
         else:
             winner = self.bottom_team
 
+        #  int(round(numpy.random.normal(68,10),0))
+        winscore = int(round(numpy.random.normal(68,10),0))  # generate a Normal RV with mean = 68 and st. dev = 10
+        losescore = winscore + 1  # initialize the losing score
+        #  continue creating Normal RV until generated a valid lose score
+        while losescore >= winscore:
+            losescore = int(round(numpy.random.normal(68,10),0))
+
         print("---------------------------------------------")
         print("Matchup is between", self.top_team.name, "and", self.bottom_team.name + ".")
         print(self.top_team.name, "has a", str(round(top_odds * 100, 2)) + "% chance of winning.")
+        print("FINAL SCORE: ")
+
+        # if the winner is the Team on top, assign the winning score to the top Team
+        if winner.name == self.top_team.name:
+            print("(" + str(self.top_team.seed) + ") " + self.top_team.name + ": " + str(winscore))
+            print("(" + str(self.bottom_team.seed) + ") " + self.bottom_team.name + ": " + str(losescore))
+
+        # if the winner is the Team on bottom, assign the winning score to the bottom Team
+        else:
+            print("(" + str(self.top_team.seed) + ") " + self.top_team.name + ": " + str(losescore))
+            print("(" + str(self.bottom_team.seed) + ") " + self.bottom_team.name + ": " + str(winscore))
+
+        print("")
         print(winner.name, "advances. (", round(self.rand_outcome, 3), ")")
         print("---------------------------------------------")
         print("")
