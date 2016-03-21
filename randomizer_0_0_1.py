@@ -44,6 +44,7 @@ class Team:
         self.seed = int(seed)
         self.region = region
 
+    # TODO add method to build matchup history
 
 class Region:
     # this is the class that represents a region which contains the 16 teams that make up the region
@@ -232,11 +233,49 @@ class Matchup:
         print("---------------------------------------------")
         print("")
 
+        # TODO add matchup result Teams' matchup history
+
         return winner
+
 
 class FinalFour:
     def __init__(self, south_winner, west_winner, east_winner, midwest_winner):
         # TODO generate the final four class and produce champion from it
+        self.south_team = south_winner  # winner of South region - faces West winner
+        self.west_team = west_winner  # winner of West region - faces South winner
+        self.east_team = east_winner  # winner of East region - faces Midwest winner
+        self.midwest_team = midwest_winner  # winner of Midwest region - faces East winner
+
+        self.s_v_w_matchup = Matchup(self.south_team, self.west_team, 4, 0)  # Matchup between South and West
+        self.e_v_mw_matchup = Matchup(self.east_team, self.midwest_team, 4, 1) # Matchup between East and Midwest
+
+        self.champ_matchup = None # Championship Matchup - Determined in FinalFour.play_championship
+
+    def play_championship(self):
+        self.champ_matchup = Matchup(self.s_v_w_matchup.winner, self.e_v_mw_matchup.winner, 2, 0)
+
+    def print_f4_outcome(self):
+        # Final Four Matchups!
+        print('Final Four Matchups!')
+        print('---------------------------------------------')
+        # "Outcome: 0.xxx: (1) Team1 advances to the Championship"
+        print("Outcome: " + str(round(self.s_v_w_matchup.rand_outcome, 3)) + ": (" +
+              str(self.s_v_w_matchup.winner.seed) + ") " +
+              self.s_v_w_matchup.winner.name + " advances to the Championship!")
+
+        print("Outcome: " + str(round(self.e_v_mw_matchup.rand_outcome, 3)) + ": (" +
+              str(self.e_v_mw_matchup.winner.seed) + ") " +
+              self.e_v_mw_matchup.winner.name + " advances to the Championship!")
+
+        print('---------------------------------------------')
+        print('')
+        print('CHAMPIONSHIP MATCH!')
+        print('---------------------------------------------')
+
+        # "Outcome: 0.xxx: (1) has won the NCAA Tournament!!"
+        print("Outcome: " + str(round(self.champ_matchup.rand_outcome, 3)) + ": (" +
+              str(self.champ_matchup.winner.seed) + ") " +
+              self.champ_matchup.winner.name + " has won the NCAA Tournament!!")
 
 if __name__ == '__main__':
     # initialization of process..
@@ -247,7 +286,7 @@ if __name__ == '__main__':
 
     # read the seed files to build the teams
     # assume that the format of the file name is like "YYYY_[region]_teams.txt"
-    region_name_list = ("east", "midwest", "south", "west")
+    region_name_list = ("south", "west", "east", "midwest")
     region_list = []
 
     for region_name in region_name_list:
@@ -264,3 +303,9 @@ if __name__ == '__main__':
     # South vs. West
     # East vs. Midwest
     # (Winner of South vs. West) vs. (Winner of East vs. Midwest)
+    fin_four = FinalFour(region_list[0].region_winner, region_list[1].region_winner, region_list[2].region_winner,
+                         region_list[3].region_winner)
+
+    fin_four.play_championship()
+
+    fin_four.print_f4_outcome()
