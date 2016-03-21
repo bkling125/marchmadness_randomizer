@@ -238,6 +238,55 @@ class Matchup:
             losescore = int(round(numpy.random.normal(68, 10), 0))
 
         print("---------------------------------------------")
+
+        if self.round_num == 64:
+            printstr = "--------- ROUND OF 64: "
+            if self.top_team.region == "west":
+                printstr = printstr + "WEST REGION ----------"
+            elif self.top_team.region == "midwest":
+                printstr = printstr + "MIDWEST REGION -------"
+            elif self.top_team.region == "south":
+                printstr = printstr + "SOUTH REGION ---------"
+            elif self.top_team.region == "east":
+                printstr = printstr + "EAST REGION ----------"
+        elif self.round_num == 32:
+            printstr = "--------- ROUND OF 32: "
+            if self.top_team.region == "west":
+                printstr = printstr + "WEST REGION ----------"
+            elif self.top_team.region == "midwest":
+                printstr = printstr + "MIDWEST REGION -------"
+            elif self.top_team.region == "south":
+                printstr = printstr + "SOUTH REGION ---------"
+            elif self.top_team.region == "east":
+                printstr = printstr + "EAST REGION ----------"
+        elif self.round_num == 16:
+            printstr = "-------- SWEET SIXTEEN: "
+            if self.top_team.region == "west":
+                printstr = printstr + "WEST REGION ---------"
+            elif self.top_team.region == "midwest":
+                printstr = printstr + "MIDWEST REGION ------"
+            elif self.top_team.region == "south":
+                printstr = printstr + "SOUTH REGION --------"
+            elif self.top_team.region == "east":
+                printstr = printstr + "EAST REGION ---------"
+        elif self.round_num == 8:
+            printstr = "--------- ELITE EIGHT: "
+            if self.top_team.region == "west":
+                printstr = printstr + "WEST REGION ----------"
+            elif self.top_team.region == "midwest":
+                printstr = printstr + "MIDWEST REGION -------"
+            elif self.top_team.region == "south":
+                printstr = printstr + "SOUTH REGION ---------"
+            elif self.top_team.region == "east":
+                printstr = printstr + "EAST REGION ----------"
+        elif self.round_num == 4:
+            printstr = "---------------- FINAL FOUR -----------------"
+        elif self.round_num == 2:
+            printstr = "--------------- CHAMPIONSHIP ----------------"
+
+        print(printstr)
+        print("---------------------------------------------")
+
         print("Matchup is between", self.top_team.name, "and", self.bottom_team.name + ".")
         print(self.top_team.name, "has a", str(round(top_odds * 100, 2)) + "% chance of winning.")
         print("FINAL SCORE: ")
