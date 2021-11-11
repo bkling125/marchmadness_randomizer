@@ -1,0 +1,16 @@
+1	Michigan
+2	Alabama
+3	Texas
+4	FSU
+5	Colorado
+6	BYU
+7	UCONN
+8	LSU
+9	St Bonnaventure
+10	Maryland
+11	MSU
+12	Georgetown
+13	NCGRN
+14	Abil
+15	Iona
+16	MTSM

@@ -1,0 +1,16 @@
+1	Illinois
+2	Houston
+3	WVU
+4	OK St
+5	Tennessee
+6	SDGST
+7	Clemson
+8	Loyola Chicago
+9	Georgia Tech
+10	Rutgers
+11	Syracuse
+12	Oregon St
+13	Liberty
+14	Morehd
+15	Clevst
+16	Drexel

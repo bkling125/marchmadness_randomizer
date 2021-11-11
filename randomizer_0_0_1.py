@@ -10,7 +10,7 @@ def read_seed_file(run_year, region):
 
     # two directories depending on what machine i'm working on
     # directory = "F:/Github/marchmadness_randomizer/"
-    directory = "C:/Users/bkling/Documents/GitHub/marchmadness_randomizer/"
+    directory = "E:/git/marchmadness_randomizer/"
     file_path = directory + run_year + '_' + region + '_' + 'teams.txt'
     f = open(file_path)
 
@@ -319,6 +319,7 @@ class FinalFour:
         self.east_team = east_winner  # winner of East region - faces Midwest winner
         self.midwest_team = midwest_winner  # winner of Midwest region - faces East winner
 
+        #TODO: add input to fix this
         self.s_v_w_matchup = Matchup(self.south_team, self.west_team, 4, 0)  # Matchup between South and West
         self.e_v_mw_matchup = Matchup(self.east_team, self.midwest_team, 4, 1)  # Matchup between East and Midwest
 
